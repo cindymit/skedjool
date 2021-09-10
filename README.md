@@ -17,8 +17,9 @@
 - Bootstrap 
 
 ## Heroku
-<br />
 [Deployed Link](https://skedjool.herokuapp.com/)
 - Website is not functional.
 
-##Challenges
+## Challenges
+
+I found this take home assessment rather difficult and more advance than my skillset could handle. I had a difficult time creating the relations in the table, especially in regards to appointments, availability, and timeslots. I worked on different backend parts but not sure if it was correct. My website is deployed but does not run as it does not have a front-end portion. Unfortunately, I did not finish this take home assessment.
