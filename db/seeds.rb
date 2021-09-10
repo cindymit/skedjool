@@ -3,5 +3,23 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create(name: "Luke", movie: movies.first)
+
+Coach.destroy_all
+User.destroy_all
+Appointment.destroy_all
+Availability.destroy_all
+Timeslot.destroy_all
+
+@cindy = User.create!(name: "Cindy")
+puts "#{User.count} users created"
+
+@christy = Coach.create!(name: "Christy Schumm")
+@natalia = Coach.create!(name: "Natalia Stanton Jr.")
+@nola = Coach.create!(name: "Nola Murazik V")
+@elyssa = Coach.create!(name: "Elyssa O'Kon")
+@geovany = Coach.create!(name: "Dr. Geovany Keebler")
+
+puts "#{Coach.count} users created"
+
