@@ -1,14 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :update, :destroy]
 
-  # GET /appointments
-  def index
-    @appointments = Appointment.all
-
-    render json: @appointments
-  end
-
-  # GET /appointments/1
+  #GET /appointments/1
   def show
     render json: @appointment
   end
@@ -25,10 +18,6 @@ class AppointmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_appointment
-      @appointment = Appointment.find(params[:id])
-    end
 
     # Only allow a list of trusted parameters through.
     def appointment_params

@@ -10,25 +10,10 @@ class CoachesController < ApplicationController
 
   # GET /coaches/1
   def show
+    @coach = Coach.includes(:availabilities).find(params[:id])
+    @user = User.find(session[:user_id])
     render json: @coach
   end
-
-  # POST /coaches
-  def create
-    @coach = Coach.new(coach_params)
-
-    if @coach.save
-      render json: @coach, status: :created, location: @coach
-    else
-      render json: @coach.errors, status: :unprocessable_entity
-    end
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_coach
-      @coach = Coach.find(params[:id])
-    end
 
     # Only allow a list of trusted parameters through.
     def coach_params
