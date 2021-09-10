@@ -24,20 +24,6 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /appointments/1
-  def update
-    if @appointment.update(appointment_params)
-      render json: @appointment
-    else
-      render json: @appointment.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /appointments/1
-  def destroy
-    @appointment.destroy
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_appointment

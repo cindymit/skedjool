@@ -1,5 +1,5 @@
 class CoachesController < ApplicationController
-  before_action :set_coach, only: [:show, :update, :destroy]
+  before_action :set_coach, only: [:show]
 
   # GET /coaches
   def index
@@ -22,20 +22,6 @@ class CoachesController < ApplicationController
     else
       render json: @coach.errors, status: :unprocessable_entity
     end
-  end
-
-  # PATCH/PUT /coaches/1
-  def update
-    if @coach.update(coach_params)
-      render json: @coach
-    else
-      render json: @coach.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /coaches/1
-  def destroy
-    @coach.destroy
   end
 
   private
